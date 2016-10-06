@@ -1,0 +1,101 @@
+import turtle
+import random
+
+
+colorNum = 0
+
+dist = 0
+distance = 0
+
+distY = 0
+distB = 0
+distG = 0
+distR = 0
+color = ""
+
+maxDist = 1000 #Once a color reaches this distance, the race finishes
+isFinished = False
+
+##def getDist ():
+##    
+##
+##def getColor (distance) :
+##   
+##            
+##    distance = 0 
+##    return color
+##
+##def setColor (color):
+##    
+##
+##def turtleMove (distance):
+##    
+
+
+
+#def raceManager ():
+    
+
+while (isFinished != True):
+    #raceManager ()
+    #Controls Race
+
+    #Gets Distance
+    dist = random.randint(1,20)
+    
+
+    #Stores Colors And Keeps Track Of The Distance Each Color Has Covered 
+    colorNum = random.randint(1,4)
+    if colorNum == 1:
+        color = "black"
+        distY += dist
+        turtle.setx(0)
+        turtle.sety (10)
+        turtle.fd (dist)
+        print distY
+        if distY >= maxDist:
+            isFinished = True
+    elif colorNum == 2:
+        color = "blue"
+        distB += dist
+        turtle.setx(0)
+        turtle.sety (20)
+        turtle.fd (dist)
+        print distB
+        if distB >= maxDist:
+            isFinished = True
+    elif colorNum == 3:
+        color = "green"
+        distG += dist
+        turtle.setx(0)
+        turtle.sety (30)
+        turtle.fd (dist)
+        print distG
+        if distG >= maxDist:
+            isFinished = True
+    else:
+        color = "red"
+        distR += dist
+        turtle.setx(0)
+        turtle.sety (40)
+        turtle.fd (dist)
+        print distR
+        if distR >= maxDist:
+            isFinished = True
+
+    # Sets The Color
+    turtle.pencolor(color)
+
+    #Moves Turtle
+    turtle.fd(distance)
+
+    dist = 0
+
+print "Done\n\n"
+
+print "Black : ",distY
+print "Blue : " ,distB
+print "Green : ",distG
+print "Red : ", distR
+
+    
